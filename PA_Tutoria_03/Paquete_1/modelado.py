@@ -1,48 +1,48 @@
 #Modelado
-class Docente:
+class Docente:				# Creando la clase Docente
 
-	def __init__(self, n, a):
-		self.nombre = n
-		self.ciudad = a
+	def __init__(self, n, a):  # Constructor que recibe dos argumentos
+		self.name = n          
+		self.city = a
 
-	def setNombre(self, n):
-		self.nombre = n
+	def setName(self, n):  # Metodo set del atributo name
+		self.name = n
 
-	def setCiudad(self, a):
-		self.ciudad = a
+	def setCity(self, a):  # Metodo set del atributo city
+		self.city = a
 
-	def getNombre(self):
-		return self.nombre
+	def getName(self):     # Metodo get del atributo name
+		return self.name
 
-	def getCiudad(self):
-		return self.ciudad
+	def getCity(self):     # Metodo get del atributo city
+		return self.city
 
-	def presentarDatos(self):
-		cadena = "%s\n\t%s" % (self.getNombre(), self.getCiudad())
+	def presentData(self):    # Metodo para presentar los datos
+		string = "%s\n\t%s" % (self.getName(), self.getCity())    # Foramteamos la cadena
+		return string
 
 class Estudiante:
 
-	def __init__(self, n, lista_docentes):
-		self.nombres = n
+	def __init__(self, n, lista_docentes):   # Constructor que recibe dos argumentos
+		self.names = n
 		self.docentes = lista_docentes
 
-	def setNombres(self, n):
-		self.nombres = n
+	def setNames(self, n):  # Metodo set del argumetno name
+		self.names = n
 
-	def setDocentes(self, lista_docentes):
+	def setDocentes(self, lista_docentes):  # Metodo set del argumetno docentes
 		self.docentes = lista_docentes
 
-	def getNombres(self):
-		return self.nombres
+	def getNames(self):  # Metodo get del argumento names
+		return self.names
 
-	def getDocentes(self):
+	def getDocentes(self):  # Metodo get del argumento docentes
 		return self.docentes
 
-	def presentarDatos(self):
-		cadena = "Estudiante: %s" % (self.getNombres())
+	def presentData(self):   # Metodo para presentar los datos
+		cadena = "Estudiante: %s" % (self.getNames())
 		cadena = "%s\nLista Docentes:" % (cadena)
-		for i in range(len(self.docentes)):
-			print(i)
-			cadena = "%s\n\t%s\t%s" % (cadena, self.docentes[i].getNombre(), self.docentes[i].getCiudad())
+		for i in range(len(self.docentes)): # Recorre la lista de docentes y los presenta a cada uno
+			cadena = "%s\n\t%s\t%s" % (cadena, self.docentes[i].getName(), self.docentes[i].getCity())
 		return cadena
 

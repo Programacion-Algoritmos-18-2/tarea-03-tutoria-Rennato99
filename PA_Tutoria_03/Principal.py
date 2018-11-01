@@ -1,9 +1,9 @@
 #Principal
 from Paquete_1.modelado import *
-d = Docente("Docente BD", "Loja")
-d2 = Docente("Docente Prog", "Quito")
+teacher1 = Docente("Docente BD", "Loja")
+teacher2 = Docente("Docente Prog", "Quito")
 
-listado = [d, d2]
+listado = [teacher1, teacher2]
 
-e = Estudiante("Lucho", listado)
-print(e.presentarDatos())
+student = Estudiante("Lucho", listado)
+print(student.presentData())
